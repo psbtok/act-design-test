@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { ref, watch, onMounted } from 'vue';
+import { ref } from 'vue';
 import type { Product } from '~/models/models';
 import { apiPath } from '~/utils/api';
 
