@@ -1,21 +1,14 @@
 <template>
-  <div class="flex items-center justify-center h-screen text-center ">
-    <div>
-      <div class="mb-8 font-bold text-3xl flex items-center justify-center">
-        <Icon name="material-symbols:shopping-basket-outline" class="mr-4 text-pink-600" /> {{ welcome }}
-      </div>
-      <div class="text-2xl ">
-        {{ believe }}
-      </div>
+  <div class="flex flex-col min-h-screen">
+    <Header></Header>
+    <div class="flex-grow min-h-[calc(100vh-184px)]">
+      <NuxtPage />
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useApplicationStore } from '~/store/application'
-import { apiPath } from '~/utils/api'
-
-const { welcome } = useApplicationStore()
-
-const { believe } = await $fetch(apiPath.hello)
+import Footer from './components/general/footer.vue';
+import Header from './components/general/header.vue';
 </script>
